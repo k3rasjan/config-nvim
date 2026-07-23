@@ -90,4 +90,6 @@ vim.lsp.config('lua_ls', {
 	},
 })
 
-vim.lsp.enable({ 'nixd', 'lua_ls' })
+vim.lsp.config('svelte_ls', {})
+
+vim.lsp.enable({ 'nixd', 'lua_ls', 'svelte_ls' })
