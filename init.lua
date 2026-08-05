@@ -1,5 +1,5 @@
 vim.g.mapleader = ' '
-require('options')
-require('keymaps')
-require('plugins')
-require('autocmds')
+require('config.options')
+require('config.keymaps')
+require('config.lazy')
+require('config.autocmds')
