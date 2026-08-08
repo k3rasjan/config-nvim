@@ -23,8 +23,18 @@ vim.lsp.config('lua_ls', {
   },
 })
 
+vim.lsp.config('pyright', {
+  settings = {
+    basedpyright = {
+      analysis = {
+        typeCheckingMode = 'standard',
+      }
+    }
+  }
+})
+
 -- Configure Svelte
 vim.lsp.config('svelte', {})
 
 -- Enable the configured servers
-vim.lsp.enable({ 'nixd', 'lua_ls', 'svelte' })
+vim.lsp.enable({ 'nixd', 'lua_ls', 'svelte', 'basedpyright' })
