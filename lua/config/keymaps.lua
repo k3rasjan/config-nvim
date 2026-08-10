@@ -23,3 +23,7 @@ vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
 vim.keymap.set('n', '<Esc><Esc>', function()
   vim.cmd('noh')
 end)
+
+
+vim.keymap.del('n', '<C-W>d')
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open diagnostic window' })
