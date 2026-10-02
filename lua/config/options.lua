@@ -1,9 +1,20 @@
 -- OPTIONS
+
+-- Put binaries installed by mason.nvim on $PATH.
+-- This has to happen before lazy.nvim boots, otherwise LSP clients spawned during
+-- startup resolve `cmd` against the system $PATH and fail with "not executable".
+local mason_bin = vim.fn.stdpath('data') .. '/mason/bin'
+if vim.env.PATH then
+  vim.env.PATH = mason_bin .. ':' .. vim.env.PATH
+else
+  vim.env.PATH = mason_bin
+end
+
 vim.o.number = true -- Show line numbers in a column.
 vim.o.relativenumber = true
 
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 -- Sync clipboard between OS and Neovim.

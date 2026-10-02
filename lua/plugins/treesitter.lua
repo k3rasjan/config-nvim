@@ -12,7 +12,10 @@ return {
         "html_tags",
         "javascript",
         "typescript",
-        "python"
+        "python",
+        "cpp",
+        "c",
+        "prolog"
       })
       vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)
